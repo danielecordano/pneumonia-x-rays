@@ -1,6 +1,6 @@
 # Pneumonia Detector Web App
 
-**The web app for this pneumonia detector: https://.herokuapp.com/**
+**The web app for this pneumonia detector: https://pneumonia-x-rays.herokuapp.com/**
 
 This is a simple image classification web app to predict whether a chest X-rays image showed pneumonia.
 
