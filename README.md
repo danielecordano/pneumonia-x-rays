@@ -11,16 +11,15 @@ Chest X-ray images (anterior-posterior) were selected from retrospective cohorts
 For the analysis of chest x-ray images, all chest radiographs were initially screened for quality control by removing all low quality or unreadable scans. The diagnoses for the images were then graded by two expert physicians before being cleared for training the AI system. In order to account for any grading errors, the evaluation set was also checked by a third expert.
 
 <p align="center">
-  <img width="300" height="300" src=https://github.com/marcellusruben/rock_paper_scissor_web_app/blob/master/IM-0001-0001.jpeg>
+  <img width="300" height="300" src=https://github.com/danielecordano/pneumonia-x-rays/blob/master/IM-0001-0001.jpeg>
 </p>
 
 ## Files
 
-There are six files in this repo:
+There are five objects in this repo:
 
-- Kaggle_pneumonia_Inception_v3.ipynb: Google Colab file to load the dataset, build the ML model, and train the model.
 - pneumonia_app.py: Python file to build the web-app.
-- pneumonia.h5: file contains the trained model architecture and its corresponding weights.
+- pneumonia_mobilenet_v2: folder that contains the trained model architecture and its corresponding weights.
 - setup.sh: file to setup your configuration on Heroku.
 - requirements.txt: the file to tell Heroku which dependencies you need to build the app.
 - Procfile: file to tell Heroku which and how the command and file should be executed.
