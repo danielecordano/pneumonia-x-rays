@@ -16,6 +16,12 @@ def image_from_data(image_data):
     return img_reshape
 
 
+@st.cache(allow_output_mutation=True)
+def load_pneumonia_model():
+    model = tf.keras.models.load_model('pneumonia_mobilenet_v2')
+    return model
+
+
 st.write("""# Pneumonia detector""")
 st.write("This is a simple image classification web app to detect pneumonia from chest X-rays.")
 
@@ -28,7 +34,7 @@ else:
     image = Image.open(file)
     st.image(image, use_column_width=True)
     img = image_from_data(image)
-    model = tf.keras.models.load_model('pneumonia_mobilenet_v2')
+    model = load_pneumonia_model()
     prediction = model.predict(img)
     threshold = 0.69613934
     if prediction < threshold:
